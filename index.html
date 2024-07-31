@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Café Delicioso</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'coffee': {
+                                100: '#F3E8DF',
+                                200: '#E6D1C0',
+                                300: '#D9BAA1',
+                                400: '#CCA382',
+                                500: '#BF8C63',
+                                600: '#A66E3A',
+                                700: '#8C5E31',
+                                800: '#734D28',
+                                900: '#593C1F',
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+<body class="font-sans">
+    <!-- Header y Navbar -->
+    <header class="fixed w-full z-50 bg-white bg-opacity-90">
+            <nav class="container mx-auto px-6 py-3">
+                <div class="flex justify-between items-center">
+                    <a href="#" class="text-2xl font-bold text-brown-600">Café Delicioso</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="#hero" class="text-brown-600 hover:text-brown-800">Inicio</a>
+                        <a href="#explore" class="text-brown-600 hover:text-brown-800">Explorar</a>
+                        <a href="#about" class="text-brown-600 hover:text-brown-800">Sobre Nosotros</a>
+                        <a href="#menu" class="text-brown-600 hover:text-brown-800">Menú</a>
+                        <a href="#testimonials" class="text-brown-600 hover:text-brown-800">Testimonios</a>
+                        <a href="#location" class="text-brown-600 hover:text-brown-800">Ubicación</a>
+                    </div>
+                    <button class="md:hidden">
+                        <i class="fas fa-bars text-brown-600"></i>
+                    </button>
+                </div>
+            </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('HERO.jpg');">
+        <div class="text-center text-white">
+            <h1 class="text-5xl font-bold mb-4">Bienvenido a Café Delicioso</h1>
+            <p class="text-xl mb-8">Descubre el aroma y sabor de nuestro café premium</p>
+            <a href="#menu" class="bg-brown-600 text-white px-6 py-3 rounded-full hover:bg-brown-700 transition duration-300">Ver Menú</a>
+        </div>
+    </section>
+
+    <!-- Explore Section -->
+    <section id="explore" class="py-16 bg-brown-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Explora Nuestro Café</h2>
+            <div id="default-carousel" class="relative" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./1.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="Café 1">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./2.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="Café 2">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./3.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="Café 3">
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./4.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="Café 3">
+                    </div>
+                </div>
+                <!-- Slider controls -->
+                <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-white-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        <span class="sr-only">Anterior</span>
+                    </span>
+                </button>
+                <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-white-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        <span class="sr-only">Siguiente</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Sobre Nosotros</h2>
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <img src="./ABOUT.jpg" alt="Nuestro café" class="rounded-lg shadow-lg">
+                </div>
+                <div class="w-full md:w-1/2 md:pl-8">
+                    <p class="text-lg mb-4">En Café Delicioso, nos apasiona ofrecer la mejor experiencia de café. Nuestros granos son cuidadosamente seleccionados y tostados para brindar un sabor excepcional en cada taza.</p>
+                    <p class="text-lg">Con más de 20 años de experiencia, nos enorgullece ser parte de tu rutina diaria y momentos especiales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-brown-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Nuestro Menú</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Repeat this block 8 times for a 2x8 grid -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="./C1.jpg" alt="Café Americano" class="w-full aspect-h-9 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Café Americano</h3>
+                    <p class="text-gray-600 mb-4">Nuestro clásico café americano, fuerte y aromático.</p>
+                    <span class="text-brown-600 font-bold">$2.50</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="./C2.jpg" alt="Café Americano" class="w-full aspect-h-9 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Café Americano</h3>
+                    <p class="text-gray-600 mb-4">Nuestro clásico café americano, fuerte y aromático.</p>
+                    <span class="text-brown-600 font-bold">$2.50</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="./C3.jpg" alt="Café Americano" class="w-full aspect-h-9 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Café Americano</h3>
+                    <p class="text-gray-600 mb-4">Nuestro clásico café americano, fuerte y aromático.</p>
+                    <span class="text-brown-600 font-bold">$2.50</span>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="./C4.jpg" alt="Café Americano" class="w-full aspect-h-9 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Café Americano</h3>
+                    <p class="text-gray-600 mb-4">Nuestro clásico café americano, fuerte y aromático.</p>
+                    <span class="text-brown-600 font-bold">$2.50</span>
+                </div>
+                <!-- Repeat the above div 7 more times with different content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Lo que dicen nuestros clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial Card -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <img src="./T1.jpg" alt="Cliente" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h4 class="font-semibold">Juan Pérez</h4>
+                    <div class="flex justify-center mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600">"El mejor café que he probado en la ciudad. El ambiente es acogedor y el personal muy amable."</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <img src="./T1.jpg" alt="Cliente" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h4 class="font-semibold">Juan Pérez</h4>
+                    <div class="flex justify-center mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600">"El mejor café que he probado en la ciudad. El ambiente es acogedor y el personal muy amable."</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <img src="./T2.jpg" alt="Cliente" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h4 class="font-semibold">Juan Pérez</h4>
+                    <div class="flex justify-center mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600">"El mejor café que he probado en la ciudad. El ambiente es acogedor y el personal muy amable."</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <img src="./T3.jpg" alt="Cliente" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h4 class="font-semibold">Juan Pérez</h4>
+                    <div class="flex justify-center mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600">"El mejor café que he probado en la ciudad. El ambiente es acogedor y el personal muy amable."</p>
+                </div>
+                <!-- Repeat the above div 2 more times with different content -->
+                </div>
+        </div>
+    </section>
+    
+    <!-- Location and Hours Section -->
+    <section id="location" class="py-16 bg-brown-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Horario de Apertura</h3>
+                    <ul class="space-y-2">
+                        <li>Lunes - Viernes: 7:00 AM - 8:00 PM</li>
+                        <li>Sábado: 8:00 AM - 9:00 PM</li>
+                        <li>Domingo: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4">Ubicación</h3>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8101163721185!2d-74.07715278523793!3d4.639386496640849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a2f3f8a5d1d%3A0x1c3a1e61f9a3e0f0!2sBogot%C3%A1%2C%20Colombia!5e0!3m2!1sen!2sus!4v1627336882542!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer actualizado -->
+    <footer class="bg-coffee-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h4 class="text-xl font-bold mb-4">Café Delicioso</h4>
+                    <p>Ofreciendo el mejor café desde 2000.</p>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h4 class="text-xl font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-coffee-300">Inicio</a></li>
+                        <li><a href="#menu" class="hover:text-coffee-300">Menú</a></li>
+                        <li><a href="#about" class="hover:text-coffee-300">Sobre Nosotros</a></li>
+                        <li><a href="#location" class="hover:text-coffee-300">Ubicación</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h4 class="text-xl font-bold mb-4">Contáctanos</h4>
+                    <p>123 Calle del Café, Ciudad</p>
+                    <p>Teléfono: (123) 456-7890</p>
+                    <p>Email: info@cafedelicioso.com</p>
+                </div>
+                <div class="w-full md:w-1/4">
+                    <h4 class="text-xl font-bold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-coffee-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-coffee-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-2xl hover:text-coffee-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-coffee-300"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-coffee-700 mt-8 pt-8 text-center">
+                <p>&copy; 2024 Café Delicioso. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-4 right-4 bg-green-500 text-white rounded-full p-3 hover:bg-green-600 transition duration-300 shadow-lg z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <script>
+        // JavaScript para el menú responsive
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('button');
+            const navMenu = document.querySelector('.hidden.md\\:flex');
+
+            menuButton.addEventListener('click', function() {
+                navMenu.classList.toggle('hidden');
+                navMenu.classList.toggle('flex');
+                navMenu.classList.toggle('flex-col');
+                navMenu.classList.toggle('absolute');
+                navMenu.classList.toggle('top-16');
+                navMenu.classList.toggle('left-0');
+                navMenu.classList.toggle('right-0');
+                navMenu.classList.toggle('bg-white');
+                navMenu.classList.toggle('p-4');
+            });
+        });
+    </script>
+</body>
+</html>
